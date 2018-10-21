@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int i, flag;
+    char a[100];
+    scanf("%s", a);
+    
+    for(i=0 ; i<(strlen(a)-5) ; i++){
+        if( (a[i]=='1') && (a[i+1]=='1') && (a[i+2]=='1') && (a[i+3]=='1') && (a[i+4]=='1') && (a[i+5]=='1'))
+        {
+            flag=1; 
+            break;
+        }
+        else if( (a[i]=='0') && (a[i+1]=='0') && (a[i+2]=='0') && (a[i+3]=='0') && (a[i+4]=='0') && (a[i+5]=='0'))
+        {
+            flag=1; 
+            break;
+        }
+        else if(strlen(a)<6){
+            flag=0;
+            break;
+        }
+        else flag=0;
+    }
+    if(flag==1)
+    printf("Sorry, sorry!");
+    else printf("Good luck!");
+}
