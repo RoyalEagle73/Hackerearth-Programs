@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    int hash[26]={0}, count=0, i;
+    char a[100000];
+    scanf("%s", a);
+    
+    for(i=0; a[i]!='\0'; i++){
+    hash[  a[i] - 'a' ]++;
+    
+    if(hash[ a[i] -'a' ] > 1){
+    count++;
+    hash[ a[i] -'a' ]--;
+        }
+    }
+    printf("%d", count);
+}
