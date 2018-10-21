@@ -1,4 +1,3 @@
-```
 #include<stdio.h>
 int main(){
     int n;
@@ -20,4 +19,3 @@ int main(){
     printf("%d %d", min, max);
     
 }
-```
