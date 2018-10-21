@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+    int T;
+    scanf("%d", &T);
+while(T!=0){
+    
+    int N, i=0, count=0;
+    scanf("%d", &N);
+    int a[N];
+    
+    for(i=0; i<N; i++){
+        scanf("%d", &a[i]);
+    while(a[i]%2==0)
+    {
+        a[i]=a[i]/2;
+        count++;
+    }
+}
+printf((count%2==0)?"Alan\n":"Charlie\n");
+    T--;
+}
+    
+}
