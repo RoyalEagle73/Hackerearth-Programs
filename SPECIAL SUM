@@ -1,0 +1,1 @@
+int main(){int T; scanf("%d", &T);while(T!=0){int a;scanf("%d", &a);printf("%d\n", a);T--;}}
