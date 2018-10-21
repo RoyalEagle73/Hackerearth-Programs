@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+  
+  int N, Q, i=0;
+  scanf("%d %d", &N, &Q);
+ long long int a[N];
+  long long sum=0;
+  a[i]=0;
+  for(i=1; i<=N; i++){
+  scanf("%lld", &a[i]);
+      sum += a[i];
+      a[i]=sum;
+  }
+  
+  while(Q!=0){
+      int L, R;
+      scanf("%d %d", &L, &R);
+      printf("%lld\n", (a[R]-a[L-1])/(R-L+1));
+        
+      Q--;
+  }
+  
+}
