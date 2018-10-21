@@ -1,0 +1,2 @@
+#include<stdio.h>
+int main(){int T,n,s=0;scanf("%d",&T);while(T>0){scanf("%d",&n);if(n>0)s+=n;T--;} printf("%d",s);}
