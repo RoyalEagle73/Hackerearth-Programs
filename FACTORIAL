@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+    int num, i=0, pro=1;
+    scanf("%d", &num);
+    for(i=1; i<=num;i++){
+        pro = pro*i;
+    }
+    printf("%d", pro);
+}
