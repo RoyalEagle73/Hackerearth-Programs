@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    
+    char ch[100];
+    scanf("%s", &ch);
+    
+    int i=0, len, j=0, flag=0;
+    len=strlen(ch);
+    
+    for(i=0, j=len-1; i<j; i++, j--){
+        if(ch[i]==ch[j])
+        {flag=1;}
+         else
+        {
+        flag=0;
+        break;
+        }
+    }
+    if(flag==1)
+    printf("YES");
+    else printf("NO");
+}
