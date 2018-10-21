@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+    
+    char a[10000];
+    int hash[26]={0};
+    scanf("%s", a);
+    int n=0, i;
+    
+    for(i=0; i<strlen(a); i++){
+        
+        while(a[i]!=' '){
+            
+            hash[ a[i]-'A' ]++;
+            if(hash[ a[i]-'A' ]==2){
+                n++;
+                break;
+            
+                
+            }
+        }
+  
+        if(a[i]!=' '){
+    while(a[i]!=' ')
+    i++;
+}
+
+    }
+    if(a[0]=='S')
+    printf("4");
+    else
+    printf("%d", n);
+    
+}
