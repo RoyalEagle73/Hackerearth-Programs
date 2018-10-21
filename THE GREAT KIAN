@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    
+   long int N, i=0;
+    scanf("%ld", &N);
+    long long int a[N], m=0, b=0, c=0;
+    
+    for(i=1; i<=N; i++)
+    scanf("%ld", &a[i]);
+    
+    for(i=1; i<=N; i+=3)
+    m+=a[i];
+    
+    for(i=2; i<=N; i+=3)
+    b+=a[i];
+    
+    for(i=3; i<=N; i+=3)
+    c+=a[i];
+    
+    printf("%lld %lld %lld", m, b, c);
+}
