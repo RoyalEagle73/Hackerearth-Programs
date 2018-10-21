@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+    
+    int N, Q, i=0;
+    scanf("%d %d", &N, &Q);
+    
+    int a[N];
+    for(i=0; i<N; i++)
+        scanf("%d", &a[i]);
+    
+    while(Q!=0){
+        int t, L, R;
+        scanf("%d %d %d", &t, &L, &R);
+        
+        if(t==1){
+            a[L]=R;
+        }
+        else if(t==2){
+           int sum=0;
+            for(i=L; i<=R; i++){
+                sum+=a[i];
+            }
+            printf("%d\n", sum);
+        }
+        
+        
+        
+        Q--;
+    }
+    
+}
