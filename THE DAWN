@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h> 
+int main(){
+
+long long int N;
+scanf("%lld", &N); 
+long long int a, i;
+
+for(i=sqrt(N); i>=2; i--){
+     if(N%i==0){
+     a=i; 
+     break; 
+     }
+}
+
+printf("%lld", a+(N/a));
+
+}
