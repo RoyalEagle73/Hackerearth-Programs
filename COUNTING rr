@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int count=0;
+    char a[100000];
+    scanf("%s", a);
+    
+    for(int i=0; a[i]!='\0'; i++)
+            if((a[i] == 114) && (a[i+1] == 114))
+            count++;
+    
+    printf("%d", count);
+    
+}
