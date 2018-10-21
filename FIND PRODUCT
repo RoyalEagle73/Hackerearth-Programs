@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+    
+   long int product=1, temp=(pow(10,9))+7;
+    int N, i=0;
+    scanf("%d", &N);
+    int A;
+    
+    for(i=0; i<N; i++){
+        scanf("%d", &A);
+        product = (product*A)%temp;
+    }
+    
+    printf("%ld", product);
+    
+}
