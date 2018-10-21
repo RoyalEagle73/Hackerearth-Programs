@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+    int L; 
+    scanf("%d", &L);
+    int N;
+    scanf("%d", &N);
+    
+    while(N!=0){
+    int h,w;
+    scanf("%d  %d", &w,&h);
+    
+    if((w<L) || (h<L))
+        printf("UPLOAD ANOTHER\n");
+        
+        else if((w==h) && (w>=L))
+        printf("ACCEPTED\n");
+        
+        else if(((w>L) && (h>L)) || (w!=h))
+        printf("CROP IT\n");
+    
+    
+    N--;
+    }
+}
