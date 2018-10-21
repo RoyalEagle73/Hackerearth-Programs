@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int n;
+    int temp=0, pow=1, min=0, max=0;
+    
+    scanf("%d", &n);
+  
+    while(n){
+        temp=n%2;
+        if(temp==1){
+        min+=pow*temp;
+        }
+        else max+=pow*1;
+        
+        n=n/2;
+        pow=pow*2;
+    }
+    
+    printf("%d %d", min, max);
+    
+}
