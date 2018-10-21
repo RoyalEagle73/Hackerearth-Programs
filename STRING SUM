@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+    int sum=0;
+    char a[1000];
+    scanf("%s", a);
+    
+    for(int i=0; i<strlen(a); i++){
+        sum += a[i]-96; 
+    }
+    printf("%d", sum);
+}
