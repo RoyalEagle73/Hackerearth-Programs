@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+    
+    int N;
+    int i=0, sum=0;
+    scanf("%d", &N);
+    
+    while(N!=0){
+        char a[10000];
+        int hash[26]={0};
+        
+        scanf("%s", a);
+        
+        
+        for(i=0; a[i]!='\0'; i++){
+            hash[ a[i] - 'a' ]++;
+            }
+            
+            scanf("%s", a);
+                for(i=0; a[i]!='\0'; i++){
+            hash[a[i] - 'a']--;
+            }
+            
+            sum=0;
+            for(i=0; i<26; i++)
+            sum += abs(hash[i]);
+            
+            printf("%d\n", sum);
+        N--;
+    }
+    
+}
