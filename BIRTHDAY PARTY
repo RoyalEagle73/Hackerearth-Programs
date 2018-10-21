@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int T; scanf("%d", &T);
+while(T){
+    int f, N;
+    scanf("%d %d", &f, &N);
+    
+    if(N%f==0)
+    printf("Yes\n");
+    else printf("No\n");
+
+    T--;
+    }
+}
