@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int T;
+    scanf("%d", &T);
+while(T!=0){
+    char a[10];
+    scanf("%s", a);
+    int i=0, j=0, flag=0, len=strlen(a)-1;
+    long long int pro=1;
+    
+    for(i=0, j=len; i<=j; i++, j--){
+        
+        if(a[i] != a[j])
+        {
+            flag=1;
+            break;
+        }
+    }
+    
+    if(flag==0){
+    printf("Palindrome\n");
+    }
+    else{
+        pro=1;
+        for(i=0; i<strlen(a); i++)
+        pro=pro*(a[i]-96);
+        
+        printf("%lld\n", pro);
+    }
+    
+    T--;
+    }
+}
