@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int i=0, len;
+    char ch[100]={0};
+    scanf("%s", &ch);
+    len=strlen(ch);
+    
+    
+    for(i=0; i<len; i++){
+        if((ch[i]>='A') && (ch[i]<='Z'))
+        {
+            ch[i]+=32;
+        }
+        else if((ch[i]>='a') && (ch[i]<='z'))
+        {
+            ch[i]-=32;
+        }
+    }
+    
+    printf("%s", ch);
+}
