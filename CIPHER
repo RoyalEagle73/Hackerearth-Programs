@@ -1,0 +1,57 @@
+#include<stdio.h>
+int main(){
+    
+ int a=0, b=0, i=0, n, len=0;
+ char ch[100000];
+ scanf("%s", ch);
+ 
+ scanf("%d", &n);
+ 
+ len=strlen(ch);
+ 
+ for(i=0; i<len; i++){
+     b = 0;
+     a = n;
+     if((ch[i]>=65) && (ch[i]<=90)){
+         if(n>26)
+         a = a%26;
+
+        b = ch[i] + a;
+            
+         if(b>90){
+             ch[i] = 64 + (b - 90);
+         }
+         else ch[i]=b;
+         
+     }
+     else if((ch[i]>=97) && (ch[i]<=122)){
+if(n>26)
+         a = a%26;
+
+        b = ch[i] + a;
+            
+         if(b>122){
+             ch[i] = 96 + (b - 122);
+         }
+         else ch[i]=b;
+         
+         
+     }
+     
+     else if((ch[i]>=48) && (ch[i]<=57)){
+         if(n>10)
+         a = a%10;
+
+        b = ch[i] + a;
+            
+         if(b>57){
+             ch[i] = 47 + (b - 57);
+         }
+         else ch[i]=b;
+
+         
+     }
+     
+ }
+ printf("%s", ch);
+}
