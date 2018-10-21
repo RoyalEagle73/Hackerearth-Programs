@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    
+    int T;
+    scanf("%d", &T);
+    
+    while(T!=0){
+        int n, i=0, j=0;
+    scanf("%d", &n);
+    
+    for(i=1; i<=n; i++){
+        
+        //TO PRINT SPACES
+        for(j=0; j<n-i; j++)
+        printf(" ");
+        
+        //TO PRINT STAR
+        for(j=0; j<(2*i)-1; j++)
+        printf("*");
+        
+        //TO PRINT NEW LINE
+        printf("\n");
+        
+    }
+    
+    T--;
+    }
+}
