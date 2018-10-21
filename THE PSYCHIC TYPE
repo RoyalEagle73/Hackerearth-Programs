@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+    int T, i; scanf("%d", &T);
+    int a[T+1];
+    
+    for(i=1; i<=T; i++)
+    scanf("%d", &a[i]);
+    
+    int A, B, C; //A=STARTING POINT B=END POINT C=PIVOT POINT
+     scanf("%d %d", &A, &B);
+    
+    if(A==B)
+    printf("Yes");
+    
+    else{
+    C=A;
+    
+    while(C){
+        C=a[C];
+        a[A]=0;
+        A=C;
+        
+        if(C==B)
+        {
+            printf("Yes");
+            break;
+        }
+    }
+    if(C==0)
+    printf("No");
+    }
+}
