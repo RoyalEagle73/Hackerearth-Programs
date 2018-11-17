@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+    //ASKING USER TO DETERMINE NUMBER OF TRANSACTIONS IN A DAY
+    int trxn; scanf("%d", &trxn);
+    int num[trxn];
+    int i;
+    
+    //ASKING USER FOR TRXNS AND SAVING EACH ELEMENT AS SUM OF ALL TRXNS PRIOR TO THAT
+    for(i=0; i<trxn; i++)
+    {
+        scanf("%d", &num[i]);
+        num[i]+=num[i-1];
+    }
+    
+    //ASKING USER FOR NUMBER OF QUERIES
+    int queries; scanf("%d", &queries);
+    
+    while(queries){
+        //DETERMINING AND SCANNING A VARIABLE FOR TARGET AND FLAG IF RESULT IS MATCHED
+        int target; scanf("%d", &target);
+        int flag=0;
+        
+        //SEARCHING THE DAY WHEN TARGET WAS ACHIEVED IF TARGET IS NOT ACHEIEVED FLAG REMAINS 0 WHICH LEADS TO PRINT -1
+        for(i=0; i<trxn; i++){
+            if(target<=num[i]){
+            printf("%d\n", i+1);
+            flag=1;
+            break;
+            }
+        }
+        if(flag==0)
+        printf("-1\n");
+        
+    queries--;
+    }
+}
