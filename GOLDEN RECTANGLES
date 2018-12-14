@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+    
+    //T FOR TEST CASES, "golden_count" TO COUNT NUMBER OF GOLDEN RECTANGLES
+    int T; scanf("%d", &T);
+    int golden_count=0;
+    
+    while(T){
+    
+    //TAKING VALUES FOR HEIGHT AND WIDTH IN DOUBLE FORMAT
+    double height, width;
+    scanf("%lf %lf", &height, &width);
+
+    //"golden_ratio" FOR CALCULATION OF RATIO
+    double golden_ratio;
+    
+    //CHECKING WHICH ONE IS LARGER AND THEN CALCULATING THE RATIO BY DIVIDIG THE LARGER ONE WITH SMALLER ONE
+    if(height>=width)
+        golden_ratio=height/width;
+    else
+        golden_ratio=width/height;
+    
+    //CHECKING IF RATIO IS IN THE GIVEN RANGE, IF IT IS, INCREMENTING "golden_count" BY 1
+    if((golden_ratio <=1.7) && (golden_ratio >=1.6))
+       golden_count++;
+       
+    T--;
+    }
+    
+    //PRINTING THE FINAL COUNT
+    printf("%d", golden_count);
+}
