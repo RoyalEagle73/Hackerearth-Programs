@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main(){
+    int T; scanf("%d", &T);
+    
+    while(T){
+    
+    //TAKING NUMBER AS STRING AND THEN COPYING IT INTO AN INTEGER "integer" FOR FURTHER CALCULATION, 
+    char num[1000000];
+    scanf("%s", num);
+    int i, integer, flag=0;
+    
+    //COPYING STRING TO NUMBER, "num" STRING TO EVALUATE EXISTENCE OF 21, AND "integer" TO FIND IF DIVISIBLE BY 21
+    sscanf(num,"%d", &integer);
+
+//IF "integer" IS DIVISIBLE BY 21< TURN FLAG TO 1, ELSE GO WITH CHECKIG 21 IN STRING
+    if(integer%21==0)
+    flag=1;
+    
+    //CHECKING IF NUMBER CONTAINS "21" OR NOT
+    else
+    {
+    for(i=0; i<strlen(num); i++){
+     if(num[i]=='2')
+     {
+         if(num[i+1]=='1')
+         {
+         flag=1;
+         break;
+         }
+     }
+    }
+    }
+   
+   //PRINTING RESULTS
+    if(flag==1)
+    printf("The streak is broken!\n");
+    else printf("The streak lives still in our heart!\n");
+    
+    
+        T--;
+    }
+}
