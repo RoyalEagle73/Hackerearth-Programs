@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main(){
+
+//T FOR TESTCASES
+    int T; scanf("%d", &T);
+    
+    while(T--){
+   
+   //SCANNING THE INPUT STRING 
+    char input_string[151];
+    scanf("%s", input_string);
+    
+   //DEFIINING STRINGS FOR SEARCH
+    char suvo[5]="SUVO";
+    char suvojit[10]="SUVOJIT";
+    
+   //STRING POINTER TO POINT TO SEARCH 
+    char *p;
+    
+   //DEFINING COUNTERS FOR BOTH  
+    int count_suvo=0, count_suvojit=0;
+ 
+   //RUNNING A LOOP AND COUNTING IF STRING EXISTS AND CHANGING FIRST CHARACTER IF EXISTS FOR BOTH
+    while( (p=strstr(input_string, suvojit)) != NULL ){
+        count_suvojit++;
+        *p=12;
+    }
+    
+    while( (p=strstr(input_string, suvo)) != NULL ){
+        count_suvo++;
+        *p=12;
+    }
+    
+    //PRINTING RESULT
+    printf("SUVO = %d, SUVOJIT = %d\n", count_suvo, count_suvojit);
+    
+    }
+}
