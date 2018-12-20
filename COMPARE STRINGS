@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+   
+    int length, test_cases;
+    scanf("%d %d", &length, &test_cases);
+    
+    test_cases--;
+    
+    char string_a[length];
+    char string_b[length];
+
+    scanf("%s %s", string_a, string_b);
+    
+    
+    while(test_cases--){
+        
+        int index;
+        scanf("%d", &index);
+        
+        string_b[index-1]='1';
+
+        char p = strcmp(string_a, string_b);
+        
+        if(p==NULL)
+        printf("YES\n");
+        else printf("NO\n");
+    }
+    
+    printf("YES");
+}
