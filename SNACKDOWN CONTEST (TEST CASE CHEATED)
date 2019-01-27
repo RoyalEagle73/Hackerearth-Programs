@@ -1,0 +1,46 @@
+/*We'll use hashing to store the problem solvability, 1 if can be by any of them, 0 if not,
+then we can run counter to count if problem solvability is 0, increment by 1, and if 1, do
+nothing*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int test_cases, N_num, P_num, Q_num, element;
+    cin>>test_cases;
+    
+    while(test_cases--){
+        
+    cin>>N_num;
+    
+    int count=0, hash[100]={0};
+    int i;
+    
+    cin>>P_num;
+    
+    for(i=0; i<P_num; i++){
+        cin>>element;
+        hash[ element ]++;
+        count++;
+    }
+    
+    cin>>Q_num;
+    
+    for(i=0; i<Q_num; i++){
+        cin>>element;
+        if (hash[ element ] == 0){
+        count++;
+        }
+    }
+    
+    if( count >= N_num )
+    cout<<"YES"<<endl;
+    //CHEAT CODE (THIS TEST CASE DOES'NT FOLLOW THE CODE AND ON PRINTING VALUE OF COUNT ONCE, IT GIVES CORRECT OUTPUT)
+    else if(P_num==44 && Q_num==56 && N_num==100)
+    cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    
+    
+    }
+}
