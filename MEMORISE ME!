@@ -1,0 +1,37 @@
+/*THIS PROBLEM CAN BE SOLVED USING HASHING EASILY,
+WHILE EACH ELEMENT NEEDS TO BE USED ONLY ONCE, 
+WE CAN SAVE MEMORY BY
+USING ONLY ONE VARIABLE
+
+USING cin AND cout IS TIME CONSUMING SO IF YOU WANT TO
+SAVE SOME TIME OR ENCOUNTER THE PROBLEM RELATED TO TIME, TRY USING printf and scanf*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int num_of_elements, element, queries, query_num, i;
+    //initiating a hash array according to constraint i.e. 1000
+    int hash[1001]={0};
+    
+   scanf("%d", &num_of_elements);
+    
+    //INCREMENTING HASH VALUE AT EACH APPEARANCE
+    for(i=0; i<num_of_elements; i++){
+         scanf("%d", &element);
+        hash[ element ]++;
+    }
+    
+     scanf("%d", &queries);
+    
+    //SEARCHING FOR QUERIES
+    for(i=0; i<queries; i++){
+         scanf("%d", &query_num);
+        if( hash[ query_num ] != 0 )
+        printf("%d\n", hash[ query_num ]);
+        else printf("NOT PRESENT\n");
+        
+    }
+    
+}
