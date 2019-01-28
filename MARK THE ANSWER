@@ -1,0 +1,21 @@
+/*'count' counts for the number of questions he can answer, if difficulty is less or equal
+to max and stop counter is less than 3, it increases by 1, else the stop counter 'count_more' 
+increases by 1*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int num, max, current, count=0, count_more=0;
+    
+    cin>>num>>max;
+    for(int i=0;i<num; i++){
+        cin>>current;
+        if(current<=max && count_more<2)
+        count++;
+        else count_more++;
+    }
+    cout<<count;
+}
