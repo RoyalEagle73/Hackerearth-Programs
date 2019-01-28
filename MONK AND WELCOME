@@ -1,0 +1,28 @@
+/*
+To save memory we can use a single variable instead of taking whole array B, and array C,
+we can directly print thesum of the variable and a[i]
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int num;
+    cin>>num;
+    
+    int *array, x;
+    array= (int *) malloc(sizeof(int)*num);
+    
+    int i;
+    
+    //READING ARRAY A
+    for(i=0; i<num; i++)
+    cin>>*(array+i);
+    
+    //READING ARRAY B AND SIMULTANEOUSLY CALCULATING C AND PRINTING
+    for(i=0; i<num; i++)
+    {
+    cin>>x;
+    x=x+(*(array+i));
+    cout<<x<<" ";
+    }
+}
