@@ -1,0 +1,31 @@
+/*
+We can take a variable max in each street to measure largest building, if current building is
+larger than the last max, it will be added to viewlist hence, by this way we can measure max money
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int i, num_of_streets;
+    long int max=999999999, height;
+    
+    cin>>num_of_streets;
+    
+    while(num_of_streets--){
+    int build, rate, money=0;
+    long int max=-999999999, height;
+    
+    cin>>build>>rate;
+    
+    for(i=0; i<build; i++){
+        cin>>height;
+        
+        if( height > max ){
+            max = height;
+            money+=rate;
+        }
+    }
+    cout<<money<<endl;
+    }
+    
