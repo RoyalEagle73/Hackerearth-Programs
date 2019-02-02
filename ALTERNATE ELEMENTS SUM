@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+class sumofarray{
+  
+  int *array, i, j, sum1=0, sum2=0;
+  
+  public:
+  
+  sumofarray(){
+      
+      array = (int *)malloc(sizeof(int)*3*3);
+      
+  }
+  
+  void read_calc(){
+      
+          
+      for(i=0; i<3; i++){
+          for(j=0; j<3; j++){
+              
+              cin>>*((array + i)+j);
+              
+              if( (i+j)%2 ==0 )
+              sum1 += *((array + i) + j);
+              else 
+              sum2 += *((array+ i) + j);
+              
+          }
+      }
+      
+  }
+  
+  ~sumofarray(){
+      
+      free(array);
+      
+  }
+  
+
+  
+void result(){
+    read_calc();
+    cout<<sum1<<endl<<sum2;
+}    
+    
+};
+
+int main(){
+    
+    sumofarray obj;
+
+    obj.result();
+    
+}
