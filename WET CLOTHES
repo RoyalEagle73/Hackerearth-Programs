@@ -1,0 +1,57 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int n, m, g;
+    cin>>n>>m>>g;
+    
+    n--;
+    
+    int rain[n];
+    int cloth[m];
+    
+    int temp_time;
+    cin>>temp_time;
+    
+    for(int i=0; i<n; i++){
+        
+        int temp_read;
+        cin>>temp_read;
+        rain[i] = temp_read - temp_time;
+        temp_time = temp_read;
+    
+
+    }
+    
+    
+    for(int i=0; i<m; i++){
+     
+        cin>>cloth[i];
+        
+    }
+    
+    int count = 0;
+    
+    for(int i=0; i<n; i++){
+        
+        int temp_count = 0;
+        
+        for(int j=0; j<m; j++){
+            
+            if( cloth[j] <=  rain[i] && cloth[j] != -1 ){
+                
+                temp_count++;
+                cloth[j] = -1;
+                
+            }
+            
+        }
+        
+        count += temp_count;
+        
+    }
+    
+    cout<<count;
+    
+}
