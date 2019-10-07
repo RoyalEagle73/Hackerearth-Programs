@@ -1,0 +1,32 @@
+/*Traverse the elemts of the array from right to left 
+    and maintain the maximum value.
+   If the current value is greater than the maximum value then save it in a new array
+        and print it in reversed order to get the desired output*/
+
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int n,i,k=0,min=0;
+    cin>>n;
+    int a[n],b[n];
+    for(i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=n-1;i>=0;i--)
+    {
+        if(a[i]>=min)
+        {
+            b[k]=a[i];
+            k++;
+        }
+        if(min<a[i])
+        min=a[i];
+    }
+    for(i=k-1;i>=0;i--)
+    {
+        cout<<b[i]<<" ";
+    } 
+}
