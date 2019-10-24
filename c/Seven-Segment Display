@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+int main(){
+    int a,b,c,i,t;
+    scanf("%d",&t);
+    for(i=0;i<t;i++){
+        int m=0;
+        char n[100];
+        scanf("%s",n);
+        for(int k=0;n[k]!='\0';k++){
+            int c=(int)n[k]-48;
+        while(c>=0){
+            int r=c%10;
+            if(r==0||r==6||r==9)
+            m+=6;
+            else if(r==2||r==5||r==3)
+            m+=5;
+            else if(r==1)
+            m+=2;
+            else if(r==4)
+            m+=4;
+            else if(r==7)
+            m+=3;
+            else if(r==8)
+            m+=7;
+            c=c/10;
+            if(c==0)
+            c--;
+        }
+        }
+        if(m%2==0){
+            int d=m/2;
+            for(int j=0;j<d;j++)
+            printf("1");
+            printf("\n");
+            
+        }
+        else{
+            int d=m/2;
+            printf("7");
+            for(int j=0;j<d-1;j++)
+            printf("1");
+            printf("\n");
+        }
+        
+    }
+    
+    return 0;
+}
