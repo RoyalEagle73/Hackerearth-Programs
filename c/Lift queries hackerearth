@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(){
+	int num,n,posA=0,posB=7,d,e;
+	scanf("%d", &num);              			
+	for(int i=0;i<num;i++)
+	{
+	    scanf("%d",&n);
+	    
+	    
+	   
+	     d=(n-posA);
+	     
+	  
+	     e=(posB-n);
+	     
+	    if(d<e)
+	    {
+	    printf("A\n");
+	    posA=n;
+	    }
+	    else if(d>e)
+	    {
+	        printf("B\n");
+	        posB=n;}
+	    else
+	    {
+	       if(posA<posB)
+	        {printf("A\n");posA=n;
+	            
+	        }
+	        else
+	       { printf("B\n");posB=n;
+	           
+	       }
+	    }
+	    
+	   
+	}
+
+}
+
