@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int t,n,cost=0,i,k;
+    int cg,cp;
+    scanf("%d",&t);
+     
+    for(k=1;k<=t;k++){
+        cost=0;
+        scanf("%d %d",&cg,&cp);
+    scanf("%d",&n);
+    int arr[n],arr1[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+        scanf("%d",&arr1[i]);
+    }
+    if(k%2==0){
+       for(i=0;i<n;i++){
+        if(arr[i]==1)
+        cost=cost+cp;
+        if(arr1[i]==1)
+        cost=cost+cg;
+    } 
+    }
+    else{
+        for(i=0;i<n;i++){
+        if(arr[i]==1)
+        cost=cost+cg;
+        if(arr1[i]==1)
+        cost=cost+cp;
+    } 
+    }
+    
+    printf("%d\n",cost);
+    }
+    return 0;
+}
