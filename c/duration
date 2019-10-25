@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+    int n,m1,m2,m3,m4;
+    int sh,sm,eh,em;
+    scanf("%d",&n);
+    while(n--)
+    {
+
+        scanf("%d%d%d%d",&sh,&sm,&eh,&em);
+        m1=(sh*60)+sm;
+        m2=(eh*60)+em;
+        m3=abs(m1-m2);
+        
+        printf("%d %d",m3/60,m3%60);
+        
+        printf("\n");
+    }
+    return 0;
+}
