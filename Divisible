@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+  long i,n,a[99999],sum1=0,sum2=0,f=0,sign=1;
+   scanf("%ld",&n);
+   for(i=0;i<n;i++)
+   {
+   scanf("%ld",&a[i]);
+   }
+   for(i=0;i<n/2;i++)
+   {
+     while(a[i]>=10)
+     a[i]=a[i]/10;
+     f=f+a[i]*sign;
+     sign=sign*-1;
+   }
+   for(i=n/2;i<n;i++)
+   {
+    a[i]=a[i]%10 ;
+    f=f+a[i]*sign;
+    sign=sign*-1;
+    }
+   if(f%11==0)
+   {
+   printf("OUI");
+   }
+   else
+   {
+   printf("NON");
+   }
+   return 0;
+}
