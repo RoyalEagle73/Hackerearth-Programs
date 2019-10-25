@@ -1,0 +1,59 @@
+
+// program to find the seating arrangement of the train
+#include <stdio.h>
+
+int main()
+{
+	int num,r,x,n,i;
+	scanf("%d", &num);              			// Reading number of test cases
+	for(i=0;i<num;i++)
+	{  scanf("%d",&n);
+	    r=n%12;
+	    switch(r)
+	    {
+	        case 0: x=n-11;
+	                printf("%d WS",x);
+	                break;
+	       case 1: x=n+11;
+	                printf("%d WS",x);
+	                break;
+	       case 2: x=n+9;
+	                printf("%d MS",x);
+	                break;
+	       case 3: x=n+7;
+	                printf("%d AS",x);
+	                break;
+	       case 4: x=n+5;
+	                printf("%d AS",x);
+	                break;
+	       case 5: x=n+3;
+	                printf("%d MS",x);
+	                break;
+	       case 6: x=n+1;
+	                printf("%d WS",x);
+	                break;
+	       case 7: x=n-1;
+	                printf("%d WS",x);
+	                break;
+           case 8: x=n-3;
+	                printf("%d MS",x);
+	                break;
+	       case 9: x=n-5;
+	                printf("%d AS",x);
+	                break;
+	       case 10: x=n-7;
+	                printf("%d AS",x);
+	                break;
+	       case 11: x=n-9;
+	                printf("%d MS",x);
+	                break;
+	    }
+	    printf("  ");
+	    printf("\n");
+	    
+	    
+	}
+}
+
+
+
