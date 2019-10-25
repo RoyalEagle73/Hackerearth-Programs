@@ -1,0 +1,43 @@
+
+#include<stdio.h>
+int main()
+{
+    int a[100]={0},b[100]={0},n,i,j,c1=0,c2=0,x,y,p1,p2,s1=0,s2=0,X;
+    scanf("%d",&n);
+    while(n--){
+         scanf("%d%d",&x,&y);
+            scanf("%d",&X);
+    for(i=1;i<=X;i++)
+    {
+        scanf("%d%d",&a[i],&b[i]);
+
+    if(a[i]==1)
+    {
+    c1++;
+    }
+    if(b[i]==1){
+        c2++;
+    }}
+    if(x>y)
+    if(c1>c2){
+        p1=c1*y;
+        p2=c2*x;}
+        else{
+            p1=c2*y;
+        p2=c1*x;
+    }
+    else
+    if(c1>c2){
+        p1=c1*x;
+        p2=c2*y;}
+        else{
+            p1=c2*x;
+        p2=c1*y;
+    
+    
+    }
+    c1=0;
+    c2=0;
+    printf("%d\n",p1+p2);}
+}
+
