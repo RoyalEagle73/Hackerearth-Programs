@@ -1,0 +1,15 @@
+#include<stdio.h>
+void sub(a,b)
+{
+  int c=a-b;
+  printf("\nsub=%d",c);
+}
+
+int main()
+{
+  int a,b;
+  printf("\nEnter the values of a and b\n");
+  scanf("%d%d",&a,&b);
+  sub(a,b);
+  return 0;
+}
