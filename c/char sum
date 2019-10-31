@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+    int a,sum=0,i;
+	char ss[100];
+	scanf("%s", &ss);
+	for(i=0;ss[i]!='\0';i++)// Reading input from STDIN
+	sum=sum+ss[i]-96;
+	printf("%d",sum);
+}
